@@ -4,8 +4,8 @@ import json
 import os
 import os.path
 import csv
-#os.system("kubectl get pods -o=json > q2pods.json")
-#os.system("kubectl get svc cache -ojson > q2svccache.json")
+os.system("kubectl get pods -o=json > q2pods.json")
+os.system("kubectl get svc cache -ojson > q2svccache.json")
 
 podReplicas = 0
 podReplicaPass = False
@@ -14,11 +14,11 @@ endpointJSONPass = False
 sortedTxtPass = False
 sortedTxtNames = []
 
-with open('/Users/tomfarrow/Repos/capdpe/katacoda-scenarios/devopsdaysquiz/assets/q2pods.json') as podlist:
+with open('q2pods.json') as podlist:
     pods = json.load(podlist)
-with open('/Users/tomfarrow/Repos/capdpe/katacoda-scenarios/devopsdaysquiz/assets/q2svccache.json') as svccache:
+with open('q2svccache.json') as svccache:
     service = json.load(svccache)
-with open('/Users/tomfarrow/Repos/capdpe/katacoda-scenarios/devopsdaysquiz/assets/q2.json') as q2json:
+with open('q2.json') as q2json:
     endpointJSON = json.load(q2json)
 import csv
 
@@ -48,7 +48,7 @@ if endpointJSON['kind'] == 'Endpoints' and endpointJSON['metadata']['name'] == '
     endpointJSONPass = True
 
 
-sortedTxt('/Users/tomfarrow/Repos/capdpe/katacoda-scenarios/devopsdaysquiz/assets/q2.txt')
+sortedTxt('q2.txt')
 
 sortedSortedTxtNames = sorted(sortedTxtNames)
 if sortedTxtNames == sortedSortedTxtNames:
