@@ -22,6 +22,7 @@
 			{
 				"title": "Question 4",
 				"text": "step4.md"
+				"verify": "step4-verify.sh"
 			}
 		],
 		"intro": {
@@ -37,6 +38,10 @@
 				"chmod": "+rwxr-xr-x"
 			},{
 				"file": "step2-verify.py",
+				"target": "/usr/local/bin/",
+				"chmod": "+rwxr-xr-x"
+			},{
+				"file": "step4-verify.py",
 				"target": "/usr/local/bin/",
 				"chmod": "+rwxr-xr-x"
 			}]
