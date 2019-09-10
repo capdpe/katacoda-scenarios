@@ -11,17 +11,17 @@
 			},
 			{
 				"title": "Question 2",
-				"verify": "step2-verify.sh"
+				"verify": "step2-verify.sh",
 				"text": "step2.md"
 			},
 			{
 				"title": "Question 3",
-				"text": "step3.md"
+				"text": "step3.md",
 				"verify": "step3-verify.sh"
 			},
 			{
 				"title": "Question 4",
-				"text": "step4.md"
+				"text": "step4.md",
 				"verify": "step4-verify.sh"
 			}
 		],
