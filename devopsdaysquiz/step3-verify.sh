@@ -1,1 +1,1 @@
-if grep -q "db-user-pass" db-secret.yaml; then echo done; fi
+python /usr/local/bin/step3-verify.py
