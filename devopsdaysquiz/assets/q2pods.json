@@ -1,0 +1,650 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-09-10T11:20:33Z",
+                "generateName": "cache-6dfc7486f4-",
+                "labels": {
+                    "pod-template-hash": "6dfc7486f4",
+                    "run": "cache"
+                },
+                "name": "cache-6dfc7486f4-2h6nz",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "cache-6dfc7486f4",
+                        "uid": "6e09b1b8-bf26-404e-9d44-ad987d135f4b"
+                    }
+                ],
+                "resourceVersion": "1016",
+                "selfLink": "/api/v1/namespaces/default/pods/cache-6dfc7486f4-2h6nz",
+                "uid": "ebf85ade-cafd-4dff-b27a-fc4157a269ec"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "memcached",
+                        "imagePullPolicy": "Always",
+                        "name": "cache",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-7pcws",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-7pcws",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-7pcws"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:44Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:44Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://ebc481a33a3c3adf7acbee8cc0f12738d8e51aacb5ecf2cf21d6955896fd2d42",
+                        "image": "memcached:latest",
+                        "imageID": "docker-pullable://memcached@sha256:23c2189194fec14672d46490c312afdef3f77e10c59c48005c4f1f0bee8d2eed",
+                        "lastState": {},
+                        "name": "cache",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-09-10T11:20:44Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.17.0.45",
+                "phase": "Running",
+                "podIP": "172.18.0.6",
+                "qosClass": "BestEffort",
+                "startTime": "2019-09-10T11:20:33Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-09-10T11:20:33Z",
+                "generateName": "cache-6dfc7486f4-",
+                "labels": {
+                    "pod-template-hash": "6dfc7486f4",
+                    "run": "cache"
+                },
+                "name": "cache-6dfc7486f4-7r5bh",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "cache-6dfc7486f4",
+                        "uid": "6e09b1b8-bf26-404e-9d44-ad987d135f4b"
+                    }
+                ],
+                "resourceVersion": "998",
+                "selfLink": "/api/v1/namespaces/default/pods/cache-6dfc7486f4-7r5bh",
+                "uid": "f0c4704f-ee88-4a8d-af21-fdbdab408652"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "memcached",
+                        "imagePullPolicy": "Always",
+                        "name": "cache",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-7pcws",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-7pcws",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-7pcws"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:41Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:41Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://fbf12830b06a4d236c03d334121fafc6f40d0af37fd9e30b300e40178be04bd0",
+                        "image": "memcached:latest",
+                        "imageID": "docker-pullable://memcached@sha256:23c2189194fec14672d46490c312afdef3f77e10c59c48005c4f1f0bee8d2eed",
+                        "lastState": {},
+                        "name": "cache",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-09-10T11:20:41Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.17.0.45",
+                "phase": "Running",
+                "podIP": "172.18.0.7",
+                "qosClass": "BestEffort",
+                "startTime": "2019-09-10T11:20:33Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-09-10T11:20:33Z",
+                "generateName": "cache-6dfc7486f4-",
+                "labels": {
+                    "pod-template-hash": "6dfc7486f4",
+                    "run": "cache"
+                },
+                "name": "cache-6dfc7486f4-smbzt",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "cache-6dfc7486f4",
+                        "uid": "6e09b1b8-bf26-404e-9d44-ad987d135f4b"
+                    }
+                ],
+                "resourceVersion": "1008",
+                "selfLink": "/api/v1/namespaces/default/pods/cache-6dfc7486f4-smbzt",
+                "uid": "c5dc0154-1b48-4ff4-8db3-bf707ce21287"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "memcached",
+                        "imagePullPolicy": "Always",
+                        "name": "cache",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-7pcws",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-7pcws",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-7pcws"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:43Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:43Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://19502a0fba0e733a69c1ba928d8947efbaa722d4b89fa52c195d9850de173fb7",
+                        "image": "memcached:latest",
+                        "imageID": "docker-pullable://memcached@sha256:23c2189194fec14672d46490c312afdef3f77e10c59c48005c4f1f0bee8d2eed",
+                        "lastState": {},
+                        "name": "cache",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-09-10T11:20:42Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.17.0.45",
+                "phase": "Running",
+                "podIP": "172.18.0.8",
+                "qosClass": "BestEffort",
+                "startTime": "2019-09-10T11:20:33Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-09-10T11:20:33Z",
+                "generateName": "cache-6dfc7486f4-",
+                "labels": {
+                    "pod-template-hash": "6dfc7486f4",
+                    "run": "cache"
+                },
+                "name": "cache-6dfc7486f4-wbttj",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "cache-6dfc7486f4",
+                        "uid": "6e09b1b8-bf26-404e-9d44-ad987d135f4b"
+                    }
+                ],
+                "resourceVersion": "1034",
+                "selfLink": "/api/v1/namespaces/default/pods/cache-6dfc7486f4-wbttj",
+                "uid": "fe66c242-5345-4ca8-a6b6-849f006a1be5"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "memcached",
+                        "imagePullPolicy": "Always",
+                        "name": "cache",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-7pcws",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-7pcws",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-7pcws"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:47Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:47Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://9f0693797c1f4992e7c63e2c0c402146275f9e7188192a773ad7985a8b1e2310",
+                        "image": "memcached:latest",
+                        "imageID": "docker-pullable://memcached@sha256:23c2189194fec14672d46490c312afdef3f77e10c59c48005c4f1f0bee8d2eed",
+                        "lastState": {},
+                        "name": "cache",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-09-10T11:20:47Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.17.0.45",
+                "phase": "Running",
+                "podIP": "172.18.0.10",
+                "qosClass": "BestEffort",
+                "startTime": "2019-09-10T11:20:33Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-09-10T11:20:33Z",
+                "generateName": "cache-6dfc7486f4-",
+                "labels": {
+                    "pod-template-hash": "6dfc7486f4",
+                    "run": "cache"
+                },
+                "name": "cache-6dfc7486f4-x7f8k",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "cache-6dfc7486f4",
+                        "uid": "6e09b1b8-bf26-404e-9d44-ad987d135f4b"
+                    }
+                ],
+                "resourceVersion": "1027",
+                "selfLink": "/api/v1/namespaces/default/pods/cache-6dfc7486f4-x7f8k",
+                "uid": "b8f2e4e3-c1b0-4b0e-8aab-0bca04c2a4e2"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "memcached",
+                        "imagePullPolicy": "Always",
+                        "name": "cache",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-7pcws",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-7pcws",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-7pcws"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:46Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:46Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-09-10T11:20:33Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://cd83fa86e1d5068d5fd2491e321d10a159ddcbf20c36b657046d5774c58c58d9",
+                        "image": "memcached:latest",
+                        "imageID": "docker-pullable://memcached@sha256:23c2189194fec14672d46490c312afdef3f77e10c59c48005c4f1f0bee8d2eed",
+                        "lastState": {},
+                        "name": "cache",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-09-10T11:20:45Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.17.0.45",
+                "phase": "Running",
+                "podIP": "172.18.0.9",
+                "qosClass": "BestEffort",
+                "startTime": "2019-09-10T11:20:33Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}

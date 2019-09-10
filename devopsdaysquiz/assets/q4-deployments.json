@@ -1,0 +1,217 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"creationTimestamp\":null,\"labels\":{\"run\":\"cache\"},\"name\":\"cache\",\"namespace\":\"default\"},\"spec\":{\"replicas\":5,\"selector\":{\"matchLabels\":{\"run\":\"cache\"}},\"strategy\":{},\"template\":{\"metadata\":{\"creationTimestamp\":null,\"labels\":{\"run\":\"cache\"}},\"spec\":{\"containers\":[{\"image\":\"memcached\",\"name\":\"cache\",\"resources\":{}}]}}},\"status\":{}}\n"
+                },
+                "creationTimestamp": "2019-09-10T14:07:34Z",
+                "generation": 1,
+                "labels": {
+                    "run": "cache"
+                },
+                "name": "cache",
+                "namespace": "default",
+                "resourceVersion": "693",
+                "selfLink": "/apis/extensions/v1beta1/namespaces/default/deployments/cache",
+                "uid": "b8d58d5e-9a55-4692-b9b4-b860b4591151"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 5,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "run": "cache"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "run": "cache"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "memcached",
+                                "imagePullPolicy": "Always",
+                                "name": "cache",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 5,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2019-09-10T14:07:50Z",
+                        "lastUpdateTime": "2019-09-10T14:07:50Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    },
+                    {
+                        "lastTransitionTime": "2019-09-10T14:07:34Z",
+                        "lastUpdateTime": "2019-09-10T14:07:51Z",
+                        "message": "ReplicaSet \"cache-6dfc7486f4\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    }
+                ],
+                "observedGeneration": 1,
+                "readyReplicas": 5,
+                "replicas": 5,
+                "updatedReplicas": 5
+            }
+        },
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1beta1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"creationTimestamp\":null,\"labels\":{\"run\":\"cka3\"},\"name\":\"cka3\",\"namespace\":\"default\"},\"spec\":{\"replicas\":1,\"selector\":{\"matchLabels\":{\"run\":\"cka3\"}},\"strategy\":{},\"template\":{\"metadata\":{\"creationTimestamp\":null,\"labels\":{\"run\":\"cka3\"}},\"spec\":{\"containers\":[{\"image\":\"nginx\",\"name\":\"cka3\",\"volumeMounts\":[{\"mountPath\":\"/usr/share/nginx/html\",\"name\":\"content\"}]}],\"initContainers\":[{\"command\":[\"sh\",\"-c\",\"echo $HOSTNAME \\u003e /mnt/index.html\"],\"image\":\"busybox\",\"name\":\"init\",\"volumeMounts\":[{\"mountPath\":\"/mnt\",\"name\":\"content\"}]}],\"volumes\":[{\"emptyDir\":{},\"name\":\"content\"}]}}}}\n"
+                },
+                "creationTimestamp": "2019-09-10T14:09:58Z",
+                "generation": 2,
+                "labels": {
+                    "run": "cka3"
+                },
+                "name": "cka3",
+                "namespace": "default",
+                "resourceVersion": "992",
+                "selfLink": "/apis/extensions/v1beta1/namespaces/default/deployments/cka3",
+                "uid": "0aa0721e-1e28-4b7b-b1aa-d4cb819737a4"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 5,
+                "revisionHistoryLimit": 2,
+                "selector": {
+                    "matchLabels": {
+                        "run": "cka3"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "run": "cka3"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "nginx",
+                                "imagePullPolicy": "Always",
+                                "name": "cka3",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/usr/share/nginx/html",
+                                        "name": "content"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "initContainers": [
+                            {
+                                "command": [
+                                    "sh",
+                                    "-c",
+                                    "echo $HOSTNAME \u003e /mnt/index.html"
+                                ],
+                                "image": "busybox",
+                                "imagePullPolicy": "Always",
+                                "name": "init",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/mnt",
+                                        "name": "content"
+                                    }
+                                ]
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "emptyDir": {},
+                                "name": "content"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 5,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2019-09-10T14:09:58Z",
+                        "lastUpdateTime": "2019-09-10T14:10:09Z",
+                        "message": "ReplicaSet \"cka3-b8cc949d7\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2019-09-10T14:10:35Z",
+                        "lastUpdateTime": "2019-09-10T14:10:35Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 2,
+                "readyReplicas": 5,
+                "replicas": 5,
+                "updatedReplicas": 5
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}

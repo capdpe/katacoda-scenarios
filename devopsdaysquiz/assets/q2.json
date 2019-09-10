@@ -1,0 +1,85 @@
+{
+    "apiVersion": "v1",
+    "kind": "Endpoints",
+    "metadata": {
+        "annotations": {
+            "endpoints.kubernetes.io/last-change-trigger-time": "2019-09-10T12:50:47Z"
+        },
+        "creationTimestamp": "2019-09-10T12:50:33Z",
+        "labels": {
+            "run": "cache"
+        },
+        "name": "cache",
+        "namespace": "default",
+        "resourceVersion": "674",
+        "selfLink": "/api/v1/namespaces/default/endpoints/cache",
+        "uid": "3076f89e-705b-4ba4-afdc-abe1e7993c8d"
+    },
+    "subsets": [
+        {
+            "addresses": [
+                {
+                    "ip": "172.18.0.10",
+                    "nodeName": "minikube",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "cache-6dfc7486f4-2bw5m",
+                        "namespace": "default",
+                        "resourceVersion": "653",
+                        "uid": "65643c58-f1ef-4e27-adf6-d433f2c8da06"
+                    }
+                },
+                {
+                    "ip": "172.18.0.6",
+                    "nodeName": "minikube",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "cache-6dfc7486f4-dt6x7",
+                        "namespace": "default",
+                        "resourceVersion": "637",
+                        "uid": "a22a0a20-ee11-4184-8e80-0f2767388797"
+                    }
+                },
+                {
+                    "ip": "172.18.0.7",
+                    "nodeName": "minikube",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "cache-6dfc7486f4-2mfw2",
+                        "namespace": "default",
+                        "resourceVersion": "662",
+                        "uid": "0b9c49c8-7a89-4751-8f31-c46fceae6bd4"
+                    }
+                },
+                {
+                    "ip": "172.18.0.8",
+                    "nodeName": "minikube",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "cache-6dfc7486f4-mwmtv",
+                        "namespace": "default",
+                        "resourceVersion": "672",
+                        "uid": "cb86e2fd-1689-4425-8802-e22010816946"
+                    }
+                },
+                {
+                    "ip": "172.18.0.9",
+                    "nodeName": "minikube",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "cache-6dfc7486f4-kbwfz",
+                        "namespace": "default",
+                        "resourceVersion": "646",
+                        "uid": "1e986b4e-6e1c-4013-8eed-aa6e00f9cb90"
+                    }
+                }
+            ],
+            "ports": [
+                {
+                    "port": 11211,
+                    "protocol": "TCP"
+                }
+            ]
+        }
+    ]
+}

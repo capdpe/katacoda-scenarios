@@ -1,0 +1,6 @@
+NAME                     READY   STATUS    RESTARTS   AGE
+cache-6dfc7486f4-2bw5m   1/1     Running   0          5m13s
+cache-6dfc7486f4-2mfw2   1/1     Running   0          5m13s
+cache-6dfc7486f4-dt6x7   1/1     Running   0          5m13s
+cache-6dfc7486f4-kbwfz   1/1     Running   0          5m13s
+cache-6dfc7486f4-mwmtv   1/1     Running   0          5m13s
