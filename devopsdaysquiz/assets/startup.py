@@ -2,7 +2,7 @@ import subprocess
 import time
 from datetime import datetime
 
-p = subprocess.Popen(['sleep', '5'])
+p = subprocess.Popen(['minikube', 'start'])
 print 'Starting Up'
 while p.poll() is None:
     print('Still starting')
