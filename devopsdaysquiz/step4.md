@@ -1,4 +1,4 @@
-a) Create a deployment called `capg3` that uses `busybox` as an **init container** to write the hostname of that **pod** to a file in a non-persistent volume. Then mount this file in a nginx:latest container at `/usr/share/nginx/html/index.html`
+a) Create a deployment called `cka3` that uses `busybox` as an **init container** to write the hostname of that **pod** to a file in a non-persistent volume. Then mount this file in a nginx:latest container at `/usr/share/nginx/html/index.html`
 
 b) Expose the **deployment** using a service.
 
