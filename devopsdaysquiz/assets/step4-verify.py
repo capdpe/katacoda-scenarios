@@ -20,9 +20,8 @@ for item in data['items']:
             except KeyError:
                 raise SystemExit(1)
 
-
 if count == 1:
-    startFile = open("/tmp/end.txt", "w")
-    startFile.write(str(datetime.now()))
-    startFile.close()
+    endFile = open("/tmp/end.txt", "w")
+    endFile.write(str(datetime.now()))
+    endFile.close()
     print "done"

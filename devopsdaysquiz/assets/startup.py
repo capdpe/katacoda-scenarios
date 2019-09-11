@@ -9,3 +9,6 @@ while p.poll() is None:
     time.sleep(8)
 
 print "Startup Complete! Click next. The timer will start as soon as the first question loads"
+startFile = open("/tmp/startupcomplete", "w")
+startFile.write(str(datetime.now()))
+startFile.close()

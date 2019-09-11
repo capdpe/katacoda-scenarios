@@ -4,10 +4,18 @@
 	"difficulty": "Intermediate",
 	"time": "5 minutes",
 	"details": {
-		"steps": [{
+		"steps": [
+			{
+				"title": "Startup",
+				"text": "startup.md",
+				"code": "startup.sh",
+				"verify": "startupverify.sh"
+			},
+			{
 				"title": "Question 1",
 				"text": "step1.md",
-				"verify": "step1-verify.sh"
+				"verify": "step1-verify.sh",
+				"courseData": "starttime.sh"
 			},
 			{
 				"title": "Question 2",
@@ -23,6 +31,11 @@
 				"title": "Question 4",
 				"text": "step4.md",
 				"verify": "step4-verify.sh"
+			},
+			{
+				"title": "Finish!!",
+				"text": "complete.md",
+				"code": "complete.sh"
 			}
 		],
 		"intro": {
@@ -46,6 +59,19 @@
 				"chmod": "+rwxr-xr-x"
 			},{
 				"file": "step3-verify.py",
+				"target": "/usr/local/bin/",
+				"chmod": "+rwxr-xr-x"
+			},{
+				"file": "startup.py",
+				"target": "/usr/local/bin/",
+				"chmod": "+rwxr-xr-x"
+			},{
+				"file": "starttime.py",
+				"target": "/usr/local/bin/",
+				"chmod": "+rwxr-xr-x"
+			},
+			{
+				"file": "completion.py",
 				"target": "/usr/local/bin/",
 				"chmod": "+rwxr-xr-x"
 			}]
