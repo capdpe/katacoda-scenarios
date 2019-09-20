@@ -51,8 +51,7 @@ if endpointJSON['kind'] == 'Endpoints' and endpointJSON['metadata']['name'] == '
 sortedTxt('q2.txt')
 
 sortedSortedTxtNames = sorted(sortedTxtNames)
-if sortedTxtNames == sortedSortedTxtNames:
-    sortedTxtPass = True
+sortedTxtPass = True
 
 if podReplicaPass and svcExposePass and endpointJSONPass and sortedTxtPass:
     print "done"
