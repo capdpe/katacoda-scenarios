@@ -28,11 +28,6 @@
 				"verify": "step3-verify.sh"
 			},
 			{
-				"title": "Question 4",
-				"text": "step4.md",
-				"verify": "step4-verify.sh"
-			},
-			{
 				"title": "Finish!!",
 				"text": "complete.md",
 				"code": "complete.sh"
