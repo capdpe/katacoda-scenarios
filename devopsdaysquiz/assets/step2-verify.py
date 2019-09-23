@@ -42,9 +42,6 @@ if podReplicas == 5:
 if service['metadata']['labels']['run'] == 'cache' and service['spec']['ports'][0]['port'] == 11211 and service['spec']['ports'][0]['targetPort'] == 11211:
     svcExposePass = True
 
-if endpointJSON['kind'] == 'Endpoints' and endpointJSON['metadata']['name'] == 'cache':
-    endpointJSONPass = True
-
 
 sortedTxt('q2.txt')
 
