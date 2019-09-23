@@ -53,5 +53,5 @@ sortedTxt('q2.txt')
 sortedSortedTxtNames = sorted(sortedTxtNames)
 sortedTxtPass = True
 
-if podReplicaPass and svcExposePass and endpointJSONPass and sortedTxtPass:
+if podReplicaPass and svcExposePass and sortedTxtPass:
     print "done"
