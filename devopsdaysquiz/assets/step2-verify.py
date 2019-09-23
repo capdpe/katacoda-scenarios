@@ -32,14 +32,14 @@ def sortedTxt(csv_file):
     return
 
 for pod in pods['items']:
-    if ((pod['metadata']['labels']['run'] == 'cache') and (pod['spec']['containers'][0]['image'] == 'memcached') and (pod['metadata']['ownerReferences'][0]['kind'] == 'ReplicaSet')):
+    if ((pod['spec']['containers'][0]['image'] == 'memcached') and (pod['metadata']['ownerReferences'][0]['kind'] == 'ReplicaSet')):
         podReplicas = podReplicas + 1
 
 if podReplicas == 5:
     podReplicaPass = True
 
 
-if service['metadata']['labels']['run'] == 'cache' and service['spec']['ports'][0]['port'] == 11211 and service['spec']['ports'][0]['targetPort'] == 11211:
+if service['spec']['ports'][0]['port'] == 11211 and service['spec']['ports'][0]['targetPort'] == 11211:
     svcExposePass = True
 
 
