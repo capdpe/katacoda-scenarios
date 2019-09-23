@@ -18,8 +18,6 @@ with open('q2pods.json') as podlist:
     pods = json.load(podlist)
 with open('q2svccache.json') as svccache:
     service = json.load(svccache)
-with open('q2.json') as q2json:
-    endpointJSON = json.load(q2json)
 import csv
 
 
